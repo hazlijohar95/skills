@@ -1,0 +1,19 @@
+date,account,memo,debit,credit,kind
+2026-07-01,Cash,Opening balance,20000.00,,opening
+2026-07-01,Accounts Receivable,Opening balance,4900.00,,opening
+2026-07-01,Prepaid Insurance,Opening balance,1200.00,,opening
+2026-07-01,Accounts Payable,Opening balance,,3000.00,opening
+2026-07-01,Accrued Liabilities,Opening balance,,800.00,opening
+2026-07-01,Retained Earnings,Opening balance,,22400.00,opening
+2026-07-03,Cash,Deposit Stripe payout,8000.00,,
+2026-07-03,Revenue,Deposit Stripe payout,,8000.00,
+2026-07-10,Rent Expense,July rent Harbor Properties,2000.00,,
+2026-07-10,Cash,July rent Harbor Properties,,2000.00,
+2026-07-15,Cash,Payment INV-1042 Brightline,3000.00,,
+2026-07-15,Accounts Receivable,Payment INV-1042 Brightline,,3000.00,
+2026-07-20,Accounts Payable,Bill pay Northwind Supply,1500.00,,
+2026-07-20,Cash,Bill pay Northwind Supply,,1500.00,
+2026-07-25,Software,Figma monthly,99.00,,
+2026-07-25,Cash,Figma monthly,,99.00,
+2026-07-26,Software,Figma monthly,99.00,,
+2026-07-26,Cash,Figma monthly,,99.00,

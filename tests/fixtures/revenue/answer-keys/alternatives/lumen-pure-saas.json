@@ -1,0 +1,26 @@
+{
+  "id": "LU-2026-030-saas",
+  "customer": "Lumen Federal CU",
+  "transaction_price": "60000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "saas",
+      "pattern": "ratable",
+      "start": "2026-07-01",
+      "end": "2027-06-30"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-07-01",
+      "amount": "60000.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-07",
+      "amount": "5000.00"
+    }
+  ]
+}

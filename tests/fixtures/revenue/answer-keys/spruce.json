@@ -1,0 +1,47 @@
+{
+  "id": "SP-2026-01",
+  "customer": "Spruce Capital",
+  "transaction_price": "80000.00",
+  "obligations": [
+    {
+      "id": "migration",
+      "pattern": "progress",
+      "progress": [
+        {
+          "period": "2026-06",
+          "complete": "0.1500000000"
+        }
+      ]
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-06-01",
+      "amount": "40000.00"
+    }
+  ],
+  "modifications": [
+    {
+      "date": "2026-07-01",
+      "method": "cumulative",
+      "price_change": "0.00",
+      "note": "estimate at completion revised to 450 hours",
+      "obligations": [
+        {
+          "id": "migration",
+          "pattern": "progress",
+          "progress": [
+            {
+              "period": "2026-06",
+              "complete": "0.1500000000"
+            },
+            {
+              "period": "2026-07",
+              "complete": "0.4000000000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "MP-2026-02",
+  "customer": "Maple Home Goods",
+  "transaction_price": "30000.00",
+  "obligations": [
+    {
+      "id": "rollout",
+      "pattern": "progress",
+      "progress": [
+        {
+          "period": "2026-05",
+          "complete": "0.3000000000"
+        },
+        {
+          "period": "2026-06",
+          "complete": "0.6500000000"
+        },
+        {
+          "period": "2026-07",
+          "complete": "1"
+        }
+      ]
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-05-01",
+      "amount": "10000.00"
+    },
+    {
+      "date": "2026-06-01",
+      "amount": "10000.00"
+    },
+    {
+      "date": "2026-07-01",
+      "amount": "10000.00"
+    }
+  ]
+}

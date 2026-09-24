@@ -1,0 +1,21 @@
+{
+  "id": "OK-2026-019-costs",
+  "customer": "Oak Street Partners",
+  "kind": "cost",
+  "transaction_price": "6600.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "deferred-commissions",
+      "pattern": "ratable",
+      "start": "2026-04-01",
+      "end": "2029-03-31"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-04-30",
+      "amount": "6600.00"
+    }
+  ]
+}

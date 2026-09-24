@@ -1,0 +1,33 @@
+{
+  "id": "LU-2026-030-residual",
+  "customer": "Lumen Federal CU",
+  "transaction_price": "60000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "term-license",
+      "pattern": "point",
+      "date": "2026-07-01",
+      "allocated": "45000.00"
+    },
+    {
+      "id": "hosting",
+      "pattern": "ratable",
+      "start": "2026-07-01",
+      "end": "2027-06-30",
+      "allocated": "15000.00"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-07-01",
+      "amount": "60000.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-07",
+      "amount": "5000.00"
+    }
+  ]
+}

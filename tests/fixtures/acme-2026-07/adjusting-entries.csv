@@ -1,0 +1,5 @@
+entry_no,date,account,memo,debit,credit
+1,2026-07-31,Accrued Liabilities,2026-07 close: reverse June rent accrual,800.00,
+1,2026-07-31,Rent Expense,2026-07 close: reverse June rent accrual,,800.00
+2,2026-07-31,Insurance Expense,2026-07 close: prepaid insurance amortization,100.00,
+2,2026-07-31,Prepaid Insurance,2026-07 close: prepaid insurance amortization,,100.00

@@ -1,0 +1,38 @@
+{
+  "id": "PL-2026-012+SOW-1",
+  "customer": "Plover Insurance",
+  "transaction_price": "58000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription",
+      "pattern": "ratable",
+      "start": "2026-07-01",
+      "end": "2027-06-30",
+      "ssp": "45600.00"
+    },
+    {
+      "id": "workflow-design",
+      "pattern": "progress",
+      "ssp": "16800.00",
+      "progress": [
+        {
+          "period": "2026-07",
+          "complete": "0.4"
+        }
+      ]
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-07-01",
+      "amount": "48000.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-07",
+      "amount": "4000.00"
+    }
+  ]
+}

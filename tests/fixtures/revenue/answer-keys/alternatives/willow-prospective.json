@@ -1,0 +1,61 @@
+{
+  "id": "WILLOW-EL-prospective",
+  "customer": "Willow Foods",
+  "transaction_price": "24500.00",
+  "obligations": [
+    {
+      "id": "consulting",
+      "pattern": "progress",
+      "progress": [
+        {
+          "period": "2026-05",
+          "complete": "0.2857142857"
+        },
+        {
+          "period": "2026-06",
+          "complete": "0.7142857143"
+        }
+      ]
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-05-31",
+      "amount": "7000.00"
+    },
+    {
+      "date": "2026-06-30",
+      "amount": "10500.00"
+    },
+    {
+      "date": "2026-07-31",
+      "amount": "7875.00"
+    }
+  ],
+  "modifications": [
+    {
+      "date": "2026-07-01",
+      "method": "prospective",
+      "price_change": "4000.00",
+      "note": "CR-2: forecast 190 hours, retrospective $150 rate applies",
+      "obligations": [
+        {
+          "id": "consulting-remaining",
+          "pattern": "progress",
+          "progress": [
+            {
+              "period": "2026-07",
+              "complete": "0.5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "refund_liability": [
+    {
+      "period": "2026-07",
+      "amount": "3625.00"
+    }
+  ]
+}

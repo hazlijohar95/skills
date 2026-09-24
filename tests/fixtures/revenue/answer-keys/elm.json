@@ -1,0 +1,30 @@
+{
+  "id": "PO-77812",
+  "customer": "Elm Biotech (marketplace)",
+  "transaction_price": "48000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription",
+      "pattern": "ratable",
+      "start": "2026-06-01",
+      "end": "2027-05-31"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-06-01",
+      "amount": "48000.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-06",
+      "amount": "46560.00"
+    },
+    {
+      "period": "2026-07",
+      "amount": "0.00"
+    }
+  ]
+}

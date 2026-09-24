@@ -1,0 +1,58 @@
+{
+  "id": "TE-2026-004",
+  "customer": "Tern Mobility",
+  "transaction_price": "60000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "platform-commitment",
+      "pattern": "ratable",
+      "start": "2026-01-01",
+      "end": "2026-12-31"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-01-01",
+      "amount": "15000.00"
+    },
+    {
+      "date": "2026-04-01",
+      "amount": "15000.00"
+    },
+    {
+      "date": "2026-07-01",
+      "amount": "15000.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-01",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-02",
+      "amount": "2500.00"
+    },
+    {
+      "period": "2026-03",
+      "amount": "3000.00"
+    },
+    {
+      "period": "2026-04",
+      "amount": "3500.00"
+    },
+    {
+      "period": "2026-05",
+      "amount": "4500.00"
+    },
+    {
+      "period": "2026-06",
+      "amount": "5500.00"
+    },
+    {
+      "period": "2026-07",
+      "amount": "4000.00"
+    }
+  ]
+}

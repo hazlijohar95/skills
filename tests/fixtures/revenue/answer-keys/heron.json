@@ -1,0 +1,66 @@
+{
+  "id": "HE-2026-001",
+  "customer": "Heron Supply",
+  "transaction_price": "24000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription",
+      "pattern": "ratable",
+      "start": "2026-01-01",
+      "end": "2026-12-31"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-01-01",
+      "amount": "24000.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-01",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-02",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-03",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-04",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-05",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-06",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-07",
+      "amount": "2000.00"
+    }
+  ],
+  "modifications": [
+    {
+      "date": "2026-07-01",
+      "method": "prospective",
+      "price_change": "27000.00",
+      "note": "blend and extend below SSP",
+      "obligations": [
+        {
+          "id": "subscription",
+          "pattern": "ratable",
+          "start": "2026-07-01",
+          "end": "2028-06-30"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "PN-2026-07",
+  "customer": "Pine Solutions (reseller)",
+  "transaction_price": "3600.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription",
+      "pattern": "ratable",
+      "start": "2026-07-01",
+      "end": "2027-06-30"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-07-01",
+      "amount": "3600.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-07",
+      "amount": "3600.00"
+    }
+  ]
+}

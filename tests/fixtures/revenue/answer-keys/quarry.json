@@ -1,0 +1,63 @@
+{
+  "id": "QU-2026-003",
+  "customer": "Quarry Robotics",
+  "transaction_price": "36000.00",
+  "unbilled": "receivable",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "platform",
+      "pattern": "ratable",
+      "start": "2026-01-01",
+      "end": "2026-12-31"
+    },
+    {
+      "id": "overage",
+      "pattern": "usage",
+      "usage": [
+        {
+          "period": "2026-06",
+          "amount": "95.00"
+        },
+        {
+          "period": "2026-07",
+          "amount": "1200.00"
+        }
+      ]
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-01-01",
+      "amount": "3000.00"
+    },
+    {
+      "date": "2026-02-01",
+      "amount": "3000.00"
+    },
+    {
+      "date": "2026-03-01",
+      "amount": "3000.00"
+    },
+    {
+      "date": "2026-04-01",
+      "amount": "3000.00"
+    },
+    {
+      "date": "2026-05-01",
+      "amount": "3000.00"
+    },
+    {
+      "date": "2026-06-01",
+      "amount": "3000.00"
+    },
+    {
+      "date": "2026-07-01",
+      "amount": "3000.00"
+    },
+    {
+      "date": "2026-07-05",
+      "amount": "95.00"
+    }
+  ]
+}

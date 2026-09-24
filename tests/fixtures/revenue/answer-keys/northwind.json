@@ -1,0 +1,54 @@
+{
+  "id": "NW-2026-014",
+  "customer": "Northwind Freight",
+  "transaction_price": "30000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription-y1",
+      "pattern": "ratable",
+      "start": "2026-03-01",
+      "end": "2027-01-31",
+      "allocated": "24000.00"
+    },
+    {
+      "id": "upfront-fee-material-right",
+      "pattern": "ratable",
+      "start": "2026-03-01",
+      "end": "2029-02-28",
+      "allocated": "6000.00"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-02-01",
+      "amount": "30000.00"
+    }
+  ],
+  "booked": [
+    {
+      "period": "2026-02",
+      "amount": "8000.00"
+    },
+    {
+      "period": "2026-03",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-04",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-05",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-06",
+      "amount": "2000.00"
+    },
+    {
+      "period": "2026-07",
+      "amount": "2000.00"
+    }
+  ]
+}

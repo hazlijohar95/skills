@@ -1,0 +1,20 @@
+{
+  "id": "HB-2025-201",
+  "customer": "Harbor Mutual",
+  "transaction_price": "270000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription",
+      "pattern": "ratable",
+      "start": "2026-01-01",
+      "end": "2028-12-31"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-01-01",
+      "amount": "60000.00"
+    }
+  ]
+}

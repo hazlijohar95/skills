@@ -1,0 +1,60 @@
+{
+  "id": "AL-2026-002",
+  "customer": "Alder Retail",
+  "transaction_price": "15000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription",
+      "pattern": "ratable",
+      "start": "2026-01-01",
+      "end": "2026-12-31",
+      "ssp": "11400.00"
+    },
+    {
+      "id": "training-1",
+      "pattern": "point",
+      "date": "2026-02-12",
+      "ssp": "2500.00"
+    },
+    {
+      "id": "training-2",
+      "pattern": "point",
+      "date": "2026-09-17",
+      "ssp": "2500.00"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-01-01",
+      "amount": "15000.00"
+    },
+    {
+      "date": "2026-07-01",
+      "amount": "2500.00"
+    }
+  ],
+  "modifications": [
+    {
+      "date": "2026-07-01",
+      "method": "prospective",
+      "price_change": "2500.00",
+      "note": "Amendment 1: 50 seats at $100, below SSP range",
+      "obligations": [
+        {
+          "id": "subscription",
+          "pattern": "ratable",
+          "start": "2026-07-01",
+          "end": "2026-12-31",
+          "ssp": "8850.00"
+        },
+        {
+          "id": "training-2",
+          "pattern": "point",
+          "date": "2026-09-17",
+          "ssp": "2500.00"
+        }
+      ]
+    }
+  ]
+}

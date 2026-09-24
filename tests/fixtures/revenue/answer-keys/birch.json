@@ -1,0 +1,26 @@
+{
+  "id": "BR-2026-011",
+  "customer": "Birch Logistics",
+  "transaction_price": "24000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription-2026",
+      "pattern": "ratable",
+      "start": "2026-01-01",
+      "end": "2026-12-31"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-01-01",
+      "amount": "24000.00"
+    }
+  ],
+  "refund_liability": [
+    {
+      "period": "2026-07",
+      "amount": "6000.00"
+    }
+  ]
+}

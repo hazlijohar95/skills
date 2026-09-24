@@ -1,0 +1,29 @@
+{
+  "id": "OK-2026-019-costs-split",
+  "customer": "Oak Street Partners",
+  "kind": "cost",
+  "transaction_price": "6600.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "commensurate-2pct",
+      "pattern": "ratable",
+      "start": "2026-04-01",
+      "end": "2027-03-31",
+      "allocated": "1200.00"
+    },
+    {
+      "id": "excess-plus-override",
+      "pattern": "ratable",
+      "start": "2026-04-01",
+      "end": "2029-03-31",
+      "allocated": "5400.00"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-04-30",
+      "amount": "6600.00"
+    }
+  ]
+}

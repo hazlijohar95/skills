@@ -1,0 +1,21 @@
+{
+  "name": "close",
+  "version": "0.6.0",
+  "description": "Run an accounting close start to finish for any client and any period. Readiness check, reconciliations, transaction cleanup, adjusting entries, ASC 606 revenue recognition for subscription and services contracts, a reviewer pass, and a delivered close package with a Word close memo that opens on the executive summary, working from trial balance and general ledger exports out of any accounting system.",
+  "author": {
+    "name": "Kick",
+    "email": "support@kick.co",
+    "url": "https://kick.co"
+  },
+  "keywords": [
+    "accounting",
+    "close",
+    "month-end",
+    "bookkeeping",
+    "reconciliation",
+    "revenue-recognition",
+    "asc-606"
+  ],
+  "displayName": "Kick Close Skills",
+  "homepage": "https://www.kick.co/accountants"
+}

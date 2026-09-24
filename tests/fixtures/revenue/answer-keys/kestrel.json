@@ -1,0 +1,24 @@
+{
+  "id": "KS-2026-044",
+  "customer": "Kestrel Outdoor",
+  "transaction_price": "42000.00",
+  "convention": "monthly",
+  "obligations": [
+    {
+      "id": "subscription",
+      "pattern": "ratable",
+      "start": "2026-07-01",
+      "end": "2027-06-30"
+    }
+  ],
+  "billings": [
+    {
+      "date": "2026-07-01",
+      "amount": "48000.00"
+    },
+    {
+      "date": "2026-07-05",
+      "amount": "-6000.00"
+    }
+  ]
+}

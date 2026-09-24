@@ -1,0 +1,14 @@
+Letterhead: Tallow Labs, Inc.
+2026-04-28
+
+Dear Dr. Amari,
+
+In consideration of Osprey's signing Order Form OS-2026-017 this week, Tallow agrees:
+
+1. Osprey receives two additional months of the Analytics Platform at no charge, extending
+   the service to 2027-06-30.
+2. If the ERP integration is not in production by 2026-07-31, Osprey may cancel and receive
+   a refund of fees for the unused term.
+
+Signed, P. Varga, Chief Executive Officer, Tallow Labs, Inc.
+Countersigned, N. Amari, Osprey Health Systems
