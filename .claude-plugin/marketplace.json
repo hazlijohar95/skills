@@ -1,0 +1,26 @@
+{
+  "name": "better-accountant",
+  "owner": {
+    "name": "Better Accountant",
+    "url": "https://better-accountant.com"
+  },
+  "description": "Better Accountant skills, as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "better-accountant",
+      "source": "./",
+      "description": "Accounting skills for a careful preparer: run a month, quarter or year-end close from trial balance and GL exports out of any system (readiness, reconciliations, cleanup, adjusting entries, independent review, close package), plus ASC 606 revenue recognition for subscription and services contracts reasoned from the contract documents.",
+      "category": "productivity",
+      "keywords": [
+        "accounting",
+        "close",
+        "month-end",
+        "bookkeeping",
+        "reconciliation",
+        "journal-entries",
+        "revenue-recognition",
+        "asc-606"
+      ]
+    }
+  ]
+}

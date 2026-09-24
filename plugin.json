@@ -1,26 +1,28 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "close",
-  "version": "0.6.0",
-  "description": "Run an accounting close start to finish for any client and any period. Readiness check, reconciliations, transaction cleanup, adjusting entries, ASC 606 revenue recognition for subscription and services contracts, a reviewer pass, and a delivered close package with a Word close memo that opens on the executive summary, working from trial balance and general ledger exports out of any accounting system.",
+  "name": "better-accountant",
+  "version": "0.7.0",
+  "description": "Accounting skills for a careful preparer: run a month, quarter or year-end close from trial balance and GL exports out of any system (readiness, reconciliations, cleanup, adjusting entries, independent review, close package), plus ASC 606 revenue recognition for subscription and services contracts reasoned from the contract documents.",
   "author": {
-    "name": "Kick",
-    "email": "support@kick.co",
-    "url": "https://kick.co"
+    "name": "Better Accountant",
+    "url": "https://better-accountant.com"
   },
-  "homepage": "https://www.kick.co/accountants",
+  "homepage": "https://better-accountant.com",
+  "repository": "https://github.com/hazlijohar95/skills",
+  "license": "MIT",
   "keywords": [
     "accounting",
     "close",
     "month-end",
     "bookkeeping",
     "reconciliation",
+    "journal-entries",
     "revenue-recognition",
     "asc-606"
   ],
   "extensions": {
-    "co.kick.close": {
-      "note": "Every skill under skills/ is self-contained; per-skill reference docs ride inside each skill folder. commands/ holds slash-command wrappers. Conformant Agent Plugins v1 clients load the eleven skills under skills/ directly."
+    "com.better-accountant": {
+      "note": "Skills live in bucket folders: skills/<bucket>/<skill>/SKILL.md. .claude-plugin/plugin.json lists the shipped set explicitly. commands/ holds slash-command wrappers that pass the plugin root."
     }
   }
 }

@@ -1,0 +1,4 @@
+# Kept out of release zips (git archive) so a blind run never sees the answer keys.
+tests/ export-ignore
+.agents/ export-ignore
+CLAUDE.md export-ignore

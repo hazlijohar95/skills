@@ -6,7 +6,7 @@ argument-hint: "[client and period, or whatever files you have on hand]"
 
 # /intake
 
-Load `${CLAUDE_PLUGIN_ROOT}/skills/intake/SKILL.md` and follow it end-to-end.
+Load `${CLAUDE_PLUGIN_ROOT}/skills/financial-close/intake/SKILL.md` and follow it end-to-end.
 
 Plugin root: ${CLAUDE_PLUGIN_ROOT}. Wherever a skill or agent file says `<plugin root>`, it
 means this folder. Pass it to any plugin agent you spawn.

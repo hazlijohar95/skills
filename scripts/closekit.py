@@ -7,7 +7,7 @@ Exit 0 means the check passed, 1 means it found problems, 2 means bad input.
 Canonical input shapes (normalize any system's export into these first):
   TB  CSV: account,debit,credit
   GL  CSV: date,account,memo,debit,credit[,kind]   kind = opening | activity (default)
-  JE  CSV: entry_no,date,account,memo,debit,credit  (see skills/je/reference/je-csv-format.md)
+  JE  CSV: entry_no,date,account,memo,debit,credit  (see skills/financial-close/journal-entry/reference/je-csv-format.md)
   Log TSV: ts,phase,event,subject,who,evidence       (written by the `log` command)
 """
 
@@ -354,7 +354,7 @@ def cmd_log(args):
 # Revenue: ASC 606 arithmetic. The revenue skill makes every judgment (what the obligations
 # are, the transaction price, SSP, which modification method); these functions only do the
 # math those judgments imply, from a contract file shaped as in
-# skills/revenue/reference/contract-file.md.
+# skills/technical-accounting/revenue-recognition/reference/contract-file.md.
 
 PATTERNS = {"ratable", "point", "progress", "usage"}
 MODIFICATION_METHODS = {"prospective", "cumulative"}
@@ -691,7 +691,7 @@ def main(argv=None):
     p.add_argument("evidence", nargs="?", default="", help="path, workpaper, or message that proves it")
     p.set_defaults(func=cmd_log)
 
-    rev = sub.add_parser("rev", help="ASC 606 arithmetic over contract files (skills/revenue/reference/contract-file.md)")
+    rev = sub.add_parser("rev", help="ASC 606 arithmetic over contract files (skills/technical-accounting/revenue-recognition/reference/contract-file.md)")
     rsub = rev.add_subparsers(dest="rev_command", required=True)
     p = rsub.add_parser("allocate", help="transaction price allocated to each obligation, at inception and after each modification")
     p.add_argument("contracts", nargs="+")

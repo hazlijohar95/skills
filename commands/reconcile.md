@@ -6,7 +6,7 @@ argument-hint: "[client and period, or the accounts to reconcile]"
 
 # /reconcile
 
-Load `${CLAUDE_PLUGIN_ROOT}/skills/reconcile/SKILL.md` and follow it end-to-end.
+Load `${CLAUDE_PLUGIN_ROOT}/skills/financial-close/reconcile/SKILL.md` and follow it end-to-end.
 
 Plugin root: ${CLAUDE_PLUGIN_ROOT}. Wherever a skill or agent file says `<plugin root>`, it
 means this folder. Pass it to any plugin agent you spawn.
