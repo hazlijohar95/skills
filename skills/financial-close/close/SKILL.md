@@ -155,7 +155,7 @@ approvals, and what to do when the tool is unavailable.
 | Intake | intake | Every required input present, or on the request list with its impact stated |
 | Prep | prep (runs reconcile, then categorize) | Every account reconciled or excepted; cleanup list dispositioned |
 | Adjust | adjust (stages entries under the journal-entry skill's contract; runs the revenue-recognition skill's Period roll for contract clients) | Every entry approved, declined, or blocked with its missing source named |
-| Review | review, run by the `better-accountant:close-reviewer` subagent | Verdict in the review report: ready, or blockers routed to owning phases |
+| Review | review, run by the `better-accountant-skills:close-reviewer` subagent | Verdict in the review report: ready, or blockers routed to owning phases |
 | Deliver | deliver | Package filed; every figure ties to the adjusted TB |
 
 Run the phases in order, each via its skill. Rules of the run:
@@ -173,7 +173,7 @@ Run the phases in order, each via its skill. Rules of the run:
   Interrupt mid-phase only for the JE approval gate or a true blocker. A phase boundary
   is also a turn boundary: finish the phase, report it in one line, raise the batch, and
   stop for the user rather than rolling into the next phase in the same turn.
-- Review runs in a fresh context. Spawn the `better-accountant:close-reviewer` agent with only the close
+- Review runs in a fresh context. Spawn the `better-accountant-skills:close-reviewer` agent with only the close
   folder path, the profile path, the period, and the plugin root; never pass your own summary of the
   work, since a reviewer primed with the preparer's story checks the story. Where
   subagents are unavailable, run the review skill yourself and state in the review

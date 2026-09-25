@@ -1,80 +1,99 @@
-# Better Accountant
+# Skills For Better Accountants
 
-Agent skills that close the books the way a careful preparer would.
+Agent skills for closing real books, not vibe bookkeeping.
 
-Drop in a trial balance and a general ledger export from any accounting system, type `/close`, and work through intake, prep, adjust, review, and deliver. The agent derives what the data can prove, follows this client's precedent, and brings you one list of open items instead of fifty interruptions. For US GAAP clients, it also makes ASC 606 revenue calls from the contracts themselves.
+Closing books with an agent is hard to trust. It will add a column in prose and get it wrong, call an entry approved because a spreadsheet said so, and spread revenue the way the invoices were written. Generic prompts don't fix that, and neither does a tool that hides the work.
 
-No connectors required. Nothing is posted anywhere: adjusting entries leave as an approved register plus an import-ready CSV you load into your own system.
+These skills are small, readable, and composable. Each one is a procedure a careful preparer already follows, written down so the agent follows it too, with the arithmetic done by code instead of by the model. They're built on how a close is actually run and reviewed. Read them. Adapt them to your firm. Enjoy.
 
-Built for accountants and bookkeepers who sign their name to the result. More at [better-accountant.com](https://better-accountant.com).
+To keep up with changes to these skills, and new ones as they ship, follow along at [better-accountant.com](https://better-accountant.com).
 
-## Installation
+## Installation (30-second setup)
 
-### Claude Code
+### 1. Get the skills
+
+<details>
+<summary><strong>Claude Code</strong></summary>
 
 ```
 /plugin marketplace add hazlijohar95/skills
-/plugin install better-accountant@better-accountant
+/plugin install better-accountant-skills@better-accountant
 ```
 
-### Claude and Cowork
+The whole set installs as one plugin. The skills share a close kit and two reviewer agents, so they aren't installed one at a time.
 
-1. Download `better-accountant.zip` from the latest release.
+</details>
+
+<details>
+<summary><strong>Claude and Cowork</strong></summary>
+
+1. Download `better-accountant-skills.zip` from the latest release.
 2. Open **Customize** → **Plugins** → **Add** → **Upload plugin** (in Cowork, Customize is in the left sidebar).
-3. Select the zip and confirm. The trust warning is expected for any uploaded plugin. This plugin reads and writes only files in your workspace.
+3. Select the zip and confirm. The trust warning is expected for any uploaded plugin; these skills read and write only files in your workspace.
 
-Run full closes in **Cowork**, or anywhere with a file workspace: a close's state lives in its files. Quick questions and one-off checks work in any chat.
+Run full closes in **Cowork**, or anywhere with a file workspace, because a close's state lives in its files. Quick questions work in any chat.
 
-## Quick start
+</details>
 
-```
-/setup-client Acme Co      ← optional: a 5-minute interview that saves the client profile
-/close Acme Co 2026-07     ← runs the close; the period can be a month, quarter, or year
-```
+### 2. Run `/setup-client` for each client
 
-Or start smaller: drop a trial balance into the chat and ask "are these books ready to close?"
+Once per client. It will:
 
-## Why these skills exist
+- Read what already exists (CRM notes, call notes, prior workpapers) before asking you anything
+- Ask for what's missing: basis, materiality, risk areas, recurring schedules
+- Save a profile every close for that client reads
 
-An agent can already do bookkeeping. These skills fix the ways it does it badly.
+It's optional. A close runs without a profile, on stated defaults; it's just sharper with one.
 
-### #1: The numbers are made up
+### 3. Run `/close Acme Co 2026-07`
 
-**The problem.** A model will add a column in prose, get it slightly wrong, and write the result into a memo with full confidence. When data is missing, it fills the gap with a plausible estimate.
+The period can be a month, a quarter (`2026-Q2`), or a year (`FY2025`). Or start smaller: drop a trial balance into the chat and ask "are these books ready to close?"
 
-**The fix.** Every figure traces to your data or to an executed computation. The [close kit](#the-close-kit) runs the mechanical checks (the TB balances, the GL ties to the TB, the entries balance) so they are executed, never reasoned through, and its output goes into the workpaper as evidence. A gap in the data becomes an exception on the register, never an estimate.
+## Why These Skills Exist
 
-### #2: Nobody actually approved it
+I built these skills to fix the ways an agent fails at the work accountants actually sign.
 
-**The problem.** "Approved" in a spreadsheet, or in a past conversation, is a claim. An agent that trusts it ships entries nobody signed off.
+### #1: The Numbers Are Made Up
 
-**The fix.** An approval counts only when it is posted in the books or recorded in the close log, naming who gave it. `closekit je --log` refuses an import CSV holding any entry without one. No entry is marked approved, and no close is called complete, without your explicit confirmation.
+**The Problem**: A model does arithmetic by predicting text. It adds a column in prose, gets it slightly wrong, and writes the result into a memo with full confidence. When data is missing, it fills the gap with a plausible estimate.
 
-### #3: The preparer grades its own work
+**The Fix** is to take arithmetic away from the model. The [close kit](#the-close-kit) runs every mechanical check (the TB balances, the GL ties to the TB, the entries balance, the revenue schedule) as code, and its output goes into the workpaper as the evidence. A gap in the data becomes an exception on the register, never an estimate.
 
-**The problem.** A reviewer who has read the preparer's summary checks the story, not the books.
+### #2: Nobody Actually Approved It
 
-**The fix.** [`review`](./skills/financial-close/review/SKILL.md) runs in a separate `close-reviewer` agent that sees only the close folder and reruns the kit's checks itself. By default, a revenue judgment that is material or contested goes to a `revenue-challenger` agent whose only job is to argue the other side.
+**The Problem**: "Approved" in a spreadsheet, or in last week's conversation, is a claim. An agent that trusts it ships entries nobody signed off.
 
-### #4: Revenue by template
+**The Fix**: an approval counts only when it is posted in the books or recorded in the close log, naming who gave it. `closekit je --log` refuses an import CSV holding any entry without one. No entry is marked approved, and no close is called complete, without your explicit confirmation.
 
-**The problem.** Most revenue schedules follow the invoices. ASC 606 follows control of what was promised, and the facts that change the answer (a side letter, a termination right, a discounted option) sit in the documents, not the billing system.
+### #3: The Preparer Grades Its Own Work
 
-**The fix.** [`revenue-recognition`](./skills/technical-accounting/revenue-recognition/SKILL.md) reads the contract documents first and works five questions from first principles. Each conclusion names its deciding fact and the treatment it rejected, in a position memo. The kit does the allocation and schedule arithmetic, and codification references come only from a verified table.
+**The Problem**: A reviewer who has read the preparer's summary checks the story, not the books. An agent reviewing its own close is the extreme case.
 
-### #5: Fifty interruptions
+**The Fix**: [`/review`](./skills/financial-close/review/SKILL.md) runs in a separate `close-reviewer` agent that sees only the close folder and reruns the kit's checks itself. A revenue judgment that is material or contested goes to a `revenue-challenger` agent whose only job is to argue the other side.
 
-**The problem.** An agent that asks every question the moment it thinks of it turns a close into a chat.
+### #4: Revenue By Template
 
-**The fix.** Questions are batched at phase boundaries and put as multiple choice, with a recommended answer and the figure at stake. Only an entry approval or a true blocker interrupts a phase, and anything above materiality is asked on its own.
+**The Problem**: Most revenue schedules follow the invoices. ASC 606 follows control of what was promised, and the facts that change the answer (a side letter, a termination right, a discounted option, a second contract signed the same week) sit in the documents, not the billing system.
+
+**The Fix**: [`/revenue-recognition`](./skills/technical-accounting/revenue-recognition/SKILL.md) reads the contract documents first and works five questions from first principles. Each conclusion names its deciding fact and the treatment it rejected, in a position memo. The kit does the allocation and schedule arithmetic, and codification references come only from a verified table.
+
+### #5: Fifty Interruptions
+
+**The Problem**: An agent that asks every question the moment it thinks of it turns a close into a chat, and the question that matters gets lost among the ones that don't.
+
+**The Fix**: questions are batched at phase boundaries and put as multiple choice, with a recommended answer and the figure at stake. Only an entry approval or a true blocker interrupts a phase, and anything above materiality is asked on its own.
+
+### Summary
+
+Accounting fundamentals matter more with an agent, not less: evidence over assertion, approval that is recorded, review that is independent. These skills are my best effort at writing those fundamentals down as repeatable procedure, so the close you sign is one you can defend.
 
 ## Reference
 
-These split on who can start them. **User-invoked** skills start only when you type them; `close` is one, because starting a close is your decision. **Model-invoked** skills can be typed, or the agent reaches for them when the task fits, and each also works on its own.
+These split on one axis: who can invoke them. **User-invoked** skills are reachable only when you type them (e.g. `/close`); starting a close is your decision. **Model-invoked** skills can be typed by you, or reached for automatically by the agent when the task fits; each also works on its own.
 
-### Financial close
+### Financial Close
 
-Close one client's books for one period, from trial balance and GL exports.
+Close one client's books for one period, from trial balance and GL exports out of any accounting system.
 
 **User-invoked**
 
@@ -92,7 +111,7 @@ Close one client's books for one period, from trial balance and GL exports.
 - **[review](./skills/financial-close/review/SKILL.md)**: Fresh-eyes review of a prepared close, ending in a ready or not-ready verdict.
 - **[deliver](./skills/financial-close/deliver/SKILL.md)**: The close package: statements, a close memo opening on the executive summary, and a workpapers workbook.
 
-### Technical accounting
+### Technical Accounting
 
 Judgments under an accounting standard, reasoned from the source documents.
 
@@ -107,7 +126,7 @@ Spawned by the skills, each in a fresh context that sees only the files.
 - **[close-reviewer](./agents/close-reviewer.md)**: Runs `review` on a close folder it did not prepare.
 - **[revenue-challenger](./agents/revenue-challenger.md)**: Argues the strongest case against a draft revenue conclusion.
 
-## How a close flows
+## How A Close Flows
 
 | Phase | Skill | What it produces |
 | --- | --- | --- |
@@ -117,9 +136,9 @@ Spawned by the skills, each in a fresh context that sees only the files.
 | Review | `review`, in the `close-reviewer` agent | Verdict: ready, or blockers routed to the phase that owns them |
 | Deliver | `deliver` | Statements, close memo, workpapers workbook |
 
-Close state is derived from evidence (the books and the workpapers), not from a status file, so the next session or a teammate can resume a close. Setting up a workspace per client, and sharing closes across a team, is covered in [docs/workspaces.md](./docs/workspaces.md). The words the skills use are defined in [CONTEXT.md](./CONTEXT.md).
+Close state is derived from evidence (the books and the workpapers), not from a status file, so the next session or a teammate can resume a close. Setting up one workspace per client, and sharing closes across a team, is in [docs/workspaces.md](./docs/workspaces.md). The words the skills use are defined in [CONTEXT.md](./CONTEXT.md).
 
-## The close kit
+## The Close Kit
 
 `scripts/closekit.py` (Python 3.9+, standard library only) runs the checks that must be executed rather than reasoned through:
 
@@ -133,9 +152,7 @@ Close state is derived from evidence (the books and the workpapers), not from a 
 | `log` | A well-formed row is appended to the close log |
 | `rev` | ASC 606 allocation, schedules, modifications, and contract balances from a contract file |
 
-Run `python3 scripts/closekit.py <command> --help` for flags.
-
-## Safety contract
+## Safety Contract
 
 - Every figure traces to your data or a calculation you approved. A gap in the data is an exception, never an estimate.
 - No entry is marked approved, and no close is called complete, without your explicit confirmation.
@@ -143,6 +160,4 @@ Run `python3 scripts/closekit.py <command> --help` for flags.
 
 ## Contributing
 
-Repo conventions (buckets, naming, invocation, how to verify a skill change) are in [CLAUDE.md](./CLAUDE.md).
-
-MIT licensed.
+Repo conventions (buckets, naming, invocation, how to verify a skill change) are in [CLAUDE.md](./CLAUDE.md). MIT licensed.

@@ -31,7 +31,7 @@ cost a lookup and the judgment goes where the terms differ.
    deferred revenue, unbilled, and revenue by stream. Every difference is explained by a
    named contract and cause, or it is a finding.
 8. Send the policy memo, the elections, and the cumulative difference to the
-   `better-accountant:revenue-challenger` agent. A policy always gets second review, whatever the
+   `better-accountant-skills:revenue-challenger` agent. A policy always gets second review, whatever the
    profile's setting, because it decides every contract in the stream.
 9. Present for approval: the stream policies, the elections, and the transition
    adjustment with its amount and whether it corrects prior periods. Log each approval.

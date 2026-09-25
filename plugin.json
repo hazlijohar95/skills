@@ -1,10 +1,10 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "better-accountant",
+  "name": "better-accountant-skills",
   "version": "0.7.0",
-  "description": "Accounting skills for a careful preparer: run a month, quarter or year-end close from trial balance and GL exports out of any system (readiness, reconciliations, cleanup, adjusting entries, independent review, close package), plus ASC 606 revenue recognition for subscription and services contracts reasoned from the contract documents.",
+  "description": "Hazli Johar's agent skills for better accountants: run a month, quarter or year-end close from any system's trial balance and GL (readiness, reconciliations, cleanup, adjusting entries, independent review, close package), and make ASC 606 revenue calls from the contract documents.",
   "author": {
-    "name": "Better Accountant",
+    "name": "Hazli Johar",
     "url": "https://better-accountant.com"
   },
   "homepage": "https://better-accountant.com",

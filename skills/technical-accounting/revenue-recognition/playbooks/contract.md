@@ -21,7 +21,7 @@ a position memo.
    `rev balances`. Paste the commands and output into the memo.
 6. Compare with what the client booked. Quantify the difference by period and by account.
 7. When the profile's second-review setting (SKILL.md) covers this conclusion, spawn
-   `better-accountant:revenue-challenger` with the documents folder, the draft memo, and the plugin root,
+   `better-accountant-skills:revenue-challenger` with the documents folder, the draft memo, and the plugin root,
    nothing else. Resolve each
    challenge: accept it and revise, or answer it with a fact. Unresolved means open, and
    both treatments go to the user with their numbers.

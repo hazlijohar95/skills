@@ -16,7 +16,7 @@ Run `claude plugin validate . --strict` and `claude plugin validate .claude-plug
 
 ## Naming
 
-A phase skill is named for its phase (`intake`, `prep`, `reconcile`, `categorize`, `adjust`, `review`, `deliver`), because `close` maps phase to skill one to one. Every other skill names its job in full words an accountant would say: `journal-entry`, not `je`; `revenue-recognition`, not `revenue`. Agents are named for their role (`close-reviewer`, `revenue-challenger`) and are addressed as `better-accountant:<agent>`.
+A phase skill is named for its phase (`intake`, `prep`, `reconcile`, `categorize`, `adjust`, `review`, `deliver`), because `close` maps phase to skill one to one. Every other skill names its job in full words an accountant would say: `journal-entry`, not `je`; `revenue-recognition`, not `revenue`. Agents are named for their role (`close-reviewer`, `revenue-challenger`) and are addressed as `better-accountant-skills:<agent>`.
 
 Close log values (the `phase` column, such as `je` in `closekit log ... je approve`) are a data format the kit reads, not skill names. Renaming a skill never renames them.
 
@@ -48,4 +48,4 @@ No em dashes anywhere: skills, docs, READMEs, ADRs, code comments. Rewrite the s
 
 ## Release
 
-`git archive --format=zip -o better-accountant.zip HEAD` builds the upload zip for Claude and Cowork. `.gitattributes` keeps `tests/`, `.agents/`, and this file out of it.
+`git archive --format=zip -o better-accountant-skills.zip HEAD` builds the upload zip for Claude and Cowork. `.gitattributes` keeps `tests/`, `.agents/`, and this file out of it.

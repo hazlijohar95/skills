@@ -1,4 +1,4 @@
-# Better Accountant
+# Better Accountant Skills
 
 Agent skills that run an accounting close and make technical accounting calls the way a careful preparer would. The skills write for accountants, so they use the profession's words; this file pins down the ones the skills give a specific meaning.
 

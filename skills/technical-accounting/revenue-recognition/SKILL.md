@@ -49,7 +49,7 @@ names each principle that shaped a conclusion and the choice it changed.
   financing expedient, the monthly or daily convention) are recorded in the profile once,
   with the user's approval. A run without one proposes it as an open question.
 - **Second review follows the profile.** The profile's `Second review` line decides which
-  conclusions go to the `better-accountant:revenue-challenger` agent before the user sees them. A
+  conclusions go to the `better-accountant-skills:revenue-challenger` agent before the user sees them. A
   conclusion is *material* when it, or its correction to what was booked, is above
   materiality under your treatment or under any treatment the memo rejects, and
   *contested* when two supported treatments remain. Run the rejected treatment through the
