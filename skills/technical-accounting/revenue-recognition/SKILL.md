@@ -51,7 +51,10 @@ names each principle that shaped a conclusion and the choice it changed.
 - **Second review follows the profile.** The profile's `Second review` line decides which
   conclusions go to the `better-accountant:revenue-challenger` agent before the user sees them. A
   conclusion is *material* when it, or its correction to what was booked, is above
-  materiality, and *contested* when two supported treatments remain.
+  materiality under your treatment or under any treatment the memo rejects, and
+  *contested* when two supported treatments remain. Run the rejected treatment through the
+  kit to know its correction; a conclusion cannot stay under materiality by choosing the
+  treatment that keeps it there.
   - `material or contested` (the default when the profile is silent): either one.
   - `every judgment`: every conclusion that needed reasoning beyond the stream policy.
   - `contested only`: contested conclusions, whatever their size.

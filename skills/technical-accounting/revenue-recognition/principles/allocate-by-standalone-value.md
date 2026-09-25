@@ -16,7 +16,9 @@ quoted.
 
 **Pattern.**
 - Standalone selling price is the observable price when the item is sold alone to similar
-  customers. When it sells in a range, use a point the data supports and say which.
+  customers: what they paid, not the price book's list. When standalone sales data exists,
+  its median for the matching basis is the SSP, and list is only a ceiling. When it sells
+  in a range, use a point the data supports and say which.
   Without observable sales, estimate by adjusted market assessment or cost plus a margin.
   Residual only when the price is highly variable or uncertain, never as a plug. A
   service that has never been sold standalone counts as uncertain. Residual and cost plus
@@ -28,7 +30,9 @@ quoted.
   it rather than rebuilding it.
 - Allocate a discount to all obligations proportionally by default. A subset gets the
   whole discount only with observable evidence that the subset is regularly sold as a
-  bundle at that discount.
+  bundle at that discount: a pattern across other deals in the sales data. How this deal
+  was negotiated (an email saying which line gave up margin, a price that holds one item at
+  list) is the sales team's presentation, which allocation exists to override.
 - A variable amount goes wholly to one obligation or one month when its terms tie to that
   part (overage priced per month's events, an SLA credit on one month's fee) and the
   result is a fair reflection of value. Usage and credits in SaaS usually qualify. A
@@ -39,7 +43,9 @@ quoted.
 **Deciding facts.** Standalone sales data and its range. Price books. Partner pricing for
 the same service. Whether a discount pattern repeats across bundles.
 
-**The tell.** Allocations equal to invoice lines. The residual method used for a product
+**The tell.** Allocations equal to invoice lines, or to the price on one of two papers
+signed together. A discount placed on one obligation on the strength of the deal's own
+correspondence. The residual method used for a product
 with a tight observable price range. Overage estimated over a year when its price is
 monthly.
 
