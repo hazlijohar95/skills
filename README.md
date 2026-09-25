@@ -154,10 +154,12 @@ Close state is derived from evidence (the books and the workpapers), not from a 
 
 ## Safety Contract
 
+These skills prepare work for a qualified accountant to review and sign. They are not accounting, tax, or legal advice, and their output is not an audit, review, or compilation engagement. You remain responsible for every figure you deliver.
+
 - Every figure traces to your data or a calculation you approved. A gap in the data is an exception, never an estimate.
 - No entry is marked approved, and no close is called complete, without your explicit confirmation.
 - The skills never fetch external URLs. They read a connected source (a CRM, a shared drive) only when you have connected it, and post an update anywhere only when you say yes. Your data stays in your workspace.
 
 ## Contributing
 
-Repo conventions (buckets, naming, invocation, how to verify a skill change) are in [CLAUDE.md](./CLAUDE.md). MIT licensed.
+This repo doesn't accept pull requests. If a skill reaches the wrong treatment or doesn't fire when it should, [open an issue](https://github.com/hazlijohar95/skills/issues) with what you expected and what it did. Fork freely: it's MIT licensed, and [CLAUDE.md](./CLAUDE.md) explains the conventions (buckets, naming, invocation, how to verify a change).

@@ -12,7 +12,7 @@ Every shipped skill has all of these, and a skill is not added, renamed, or remo
 - a line in its bucket's `README.md` and in the top-level `README.md`, with the name linked to its `SKILL.md`, grouped into **User-invoked** and **Model-invoked**
 - its terms in `CONTEXT.md`, when it introduces a term another skill or a user will use
 
-Run `claude plugin validate . --strict` and `claude plugin validate .claude-plugin/plugin.json` after touching any manifest. The second one warns that this file is not loaded as plugin context; that is intended, since it is for maintainers, and it is the only warning allowed. Bump `version` in `.claude-plugin/plugin.json` and `plugin.json` together.
+`python3 scripts/check-manifests.py` (also run in CI) fails when `plugin.json`, `commands/`, the README, and the skills on disk disagree. Run `claude plugin validate . --strict` and `claude plugin validate .claude-plugin/plugin.json` after touching any manifest. The second one warns that this file is not loaded as plugin context; that is intended, since it is for maintainers, and it is the only warning allowed. Bump `version` in `.claude-plugin/plugin.json` and `plugin.json` together, and add a `CHANGELOG.md` entry: installed users only receive an update when the version changes.
 
 ## Naming
 
@@ -48,4 +48,4 @@ No em dashes anywhere: skills, docs, READMEs, ADRs, code comments. Rewrite the s
 
 ## Release
 
-`git archive --format=zip -o better-accountant-skills.zip HEAD` builds the upload zip for Claude and Cowork. `.gitattributes` keeps `tests/`, `.agents/`, and this file out of it.
+`git archive --format=zip -o better-accountant-skills.zip HEAD` builds the upload zip for Claude and Cowork. Attach it to a GitHub release tagged `v<version>`. `.gitattributes` keeps `tests/`, `.agents/`, `.github/`, and this file out of it.
